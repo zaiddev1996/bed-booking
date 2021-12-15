@@ -1,25 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
+import Dashboard from './Layouts/Dashboard/Dashboard';
+import 'antd/dist/antd.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function App(props) {
+	return (
+		<div className="App">
+			<Dashboard data={props.location} />
+		</div>
+	);
 }
 
 export default App;

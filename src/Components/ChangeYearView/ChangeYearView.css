@@ -1,0 +1,28 @@
+.year-view-main .arrows {
+	background-color: rgb(206 206 206);
+	height: 18px;
+	width: 18px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 3px;
+	margin-left: 10px;
+	margin-right: 10px;
+	cursor: pointer;
+	/* padding-bottom: 5px; */
+}
+
+.year-view-main .arrow-logo {
+	font-size: 10px;
+	width: 10px;
+	height: 10px;
+}
+
+.year-view-main .year-text {
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.year-view-main {
+	margin-top: 10px;
+}

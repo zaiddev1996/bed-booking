@@ -1,0 +1,25 @@
+.month-pills-main .month {
+	margin-left: 3px;
+	font-size: 10px;
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+
+	cursor: pointer;
+}
+
+.month-pills-main .selected-month {
+	background-color: rgb(0, 165, 65);
+	color: white;
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	height: 22px;
+	border-radius: 3px;
+}
+
+.month-pills-main {
+	margin-top: 10px;
+}

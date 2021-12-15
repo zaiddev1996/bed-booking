@@ -1,0 +1,116 @@
+.calendar-main .left-header {
+	background-color: #ffffff;
+	box-shadow: 0px 0px 10px 1px #cecccce7;
+}
+
+.calendar-main {
+	height: 100%;
+	overflow-x: hidden;
+}
+
+.calendar-main .custom-header {
+	height: 35px !important;
+	width: 20px !important;
+	background-color: #ffffff;
+	border: 0px !important;
+	box-shadow: 0px 0px 10px 1px #cecccce7 !important;
+}
+
+.calendar-main .header-cell-text {
+	font-size: 10px;
+	font-weight: 700;
+}
+
+.calendar-main .month-text {
+	color: rgb(133, 133, 134) !important;
+}
+
+.calendar-main .react-calendar-timeline .rct-calendar-header {
+	border: none !important;
+}
+
+.calendar-main .title {
+	font-size: 10px;
+	gap: 1px;
+	padding: 0px;
+}
+
+.calendar-main .room-name {
+	height: 10px;
+	font-weight: 600;
+}
+
+.calendar-main .custom-group {
+	padding: 0px;
+	line-height: 30px;
+}
+
+.calendar-main .room-icon-image {
+	height: 12px;
+	width: 10px;
+}
+
+.calendar-main .room-info-div {
+	margin-top: 10px;
+}
+
+.calendar-main .room-user-icon {
+	margin-left: 3px;
+}
+
+.calendar-main .room-users {
+	margin-left: 3px;
+	/* margin-top: -9px; */
+	font-size: 11px;
+	font-weight: 500;
+}
+
+.calendar-main .calendar-timeline {
+	margin-top: 20px;
+}
+
+.calendar-main .today-text {
+	height: 18px;
+	border: 1px solid rgb(200 200 200);
+	border-radius: 3px;
+	font-size: 10px !important;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
+	cursor: pointer;
+	background-color: transparent;
+	margin-top: 10px;
+}
+
+.calendar-main .ant-picker-input > input {
+	font-size: 10px;
+}
+
+.calendar-main .bottom-div {
+	height: 60px;
+	padding: 30px;
+	margin-top: 20px;
+	position: sticky;
+	bottom: 0%;
+	z-index: 100000;
+	/* width: 100%; */
+	background: #ffffff;
+	box-shadow: 0px 0px 10px 1px #cecccce7 !important;
+}
+
+.calendar-main .add-room {
+	/* height: 20px; */
+	border: 1px solid rgb(200 200 200);
+	border-radius: 3px;
+	font-size: 13px !important;
+	padding-left: 12px;
+	padding-right: 12px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	text-align: center;
+	margin-right: 5px;
+	font-weight: 500;
+	cursor: pointer;
+	background-color: transparent;
+}

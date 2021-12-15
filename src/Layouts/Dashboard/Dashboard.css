@@ -1,0 +1,71 @@
+.main-layout .trigger {
+	padding: 0 24px;
+	font-size: 18px;
+	line-height: 64px;
+	cursor: pointer;
+	transition: color 0.3s;
+	color: white;
+}
+
+#components-layout-demo-custom-trigger .trigger:hover {
+	color: #1890ff;
+}
+
+.main-layout .logo {
+	height: 28px;
+	margin: 16px;
+	color: rgb(0, 165, 65);
+	font-size: 20px;
+}
+
+.site-layout .site-layout-background {
+}
+
+.site-layout .toggle-icon-div {
+	background-color: rgb(0, 165, 65);
+	/* paddingch-left: 20px; */
+}
+
+.main-layout {
+	height: 100vh !important;
+}
+
+.main-layout .menu-sider {
+	background-color: white;
+}
+
+.main-layout .ant-menu-inline .ant-menu-item::after {
+	border-right: 3px solid rgb(0, 165, 65);
+}
+
+.main-layout .ant-menu-light .ant-menu-item-selected,
+.ant-menu-light .ant-menu-item-active {
+	color: rgb(0, 165, 65);
+	background-color: rgba(0, 165, 66, 0.178) !important;
+}
+
+.main-layout .ant-menu-item .ant-menu-item-active {
+	color: rgb(0, 165, 65) !important;
+}
+
+.main-layout .ant-menu-light .ant-menu-item:hover,
+.ant-menu-light .ant-menu-item-active {
+	color: rgb(0, 165, 65);
+}
+
+.main-layout .link-menu {
+	text-decoration: none;
+}
+
+.main-layout .ant-menu-item-selected a {
+	color: rgb(0, 165, 65) !important;
+}
+
+.main-layout .link-menu:hover {
+	color: rgb(0, 165, 65);
+}
+
+.main-layout .ant-layout-content {
+	margin-bottom: 0% !important;
+	margin-top: 10px !important;
+}
