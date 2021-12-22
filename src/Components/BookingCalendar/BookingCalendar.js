@@ -1,5 +1,11 @@
 import React, { useState } from 'react';
-import Timeline, { TimelineHeaders, CustomHeader, SidebarHeader, DateHeader } from 'react-calendar-timeline';
+import Timeline, {
+	TimelineHeaders,
+	CustomHeader,
+	SidebarHeader,
+	TimelineMarkers,
+	TodayMarker
+} from 'react-calendar-timeline';
 // make sure you include the timeline stylesheet or the timeline will not be styled
 import 'react-calendar-timeline/lib/Timeline.css';
 import './BookingCalendar.css';
@@ -10,6 +16,8 @@ import { UserOutlined, FilterOutlined } from '@ant-design/icons';
 import MonthPillsView from '../MonthPillsView/MonthPillsView';
 import ChangeYearView from '../ChangeYearView/ChangeYearView';
 import ChangeDateView from '../ChangeDateView/ChangeDataView';
+import { AddRoomModal } from '../AddRoomModal/AddRoomModal';
+import { AddReservationModal } from '../AddReservationModal/AddReservationModal';
 
 const groupRenderer = ({ group }) => {
 	return (
@@ -133,8 +141,10 @@ const items = [
 		group: 1,
 		title: 'item 1',
 		tip: '2',
+		selectedBgColor: 'green',
+		bgColor: 'rgb(0, 165, 65)',
 		start_time: moment(),
-		end_time: moment().add(24, 'hour'),
+		end_time: moment().add(3, 'day'),
 		itemProps: {
 			// these optional attributes are passed to the root <div /> of each item as <div {...itemProps} />
 			'data-custom-attribute': 'Random content',
@@ -152,9 +162,11 @@ const items = [
 		id: 2,
 		group: 2,
 		title: 'item 1',
+		selectedBgColor: 'green',
+		bgColor: 'rgb(0, 165, 65)',
 		tip: '2',
 		start_time: moment(),
-		end_time: moment().add(24, 'hour'),
+		end_time: moment().add(5, 'day'),
 		itemProps: {
 			// these optional attributes are passed to the root <div /> of each item as <div {...itemProps} />
 			'data-custom-attribute': 'Random content',
@@ -172,9 +184,11 @@ const items = [
 		id: 3,
 		group: 3,
 		title: 'item 1',
+		selectedBgColor: 'green',
+		bgColor: 'rgb(0, 165, 65)',
 		tip: '2',
 		start_time: moment(),
-		end_time: moment().add(24, 'hour'),
+		end_time: moment().add(13, 'day'),
 		itemProps: {
 			// these optional attributes are passed to the root <div /> of each item as <div {...itemProps} />
 			'data-custom-attribute': 'Random content',
@@ -190,9 +204,36 @@ const items = [
 	}
 ];
 
+const itemRenderer = ({ item, itemContext, getItemProps, getResizeProps }) => {
+	const { left: leftResizeProps, right: rightResizeProps } = getResizeProps();
+	const backgroundColor = itemContext.selected
+		? itemContext.dragging ? 'rgb(0, 165, 65)' : item.selectedBgColor
+		: item.bgColor;
+	return (
+		<div {...getItemProps({ style: { borderRadius: '4px', backgroundColor } })}>
+			{/* {itemContext.useResizeHandle ? <div {...leftResizeProps} /> : ''} */}
+			{/* <div
+				className="rct-item-content"
+				style={{
+					maxHeight: `${itemContext.dimensions.height}`,
+					background: 'rgb(0, 165, 65)',
+					borderRadius: '4px',
+					width: `${itemContext.dimensions.width}`
+				}}
+			>
+				{itemContext.title}
+			</div> */}
+			{/* {itemContext.useResizeHandle ? <div {...rightResizeProps} /> : ''} */}
+			{itemContext.title}
+		</div>
+	);
+};
+
 const BookingCalendar = () => {
 	const [ showingDate, setShowingDate ] = useState(moment());
 	const [ showingDateEnd, setShowingDateEnd ] = useState(moment().add(20, 'day'));
+	const [ showAddRoomModal, setShowAddRoomModal ] = useState(false);
+	const [ showReservationModal, setShowReservationModal ] = useState(false);
 	return (
 		<div className={'calendar-main d-flex flex-column justify-content-between'}>
 			<div>
@@ -254,12 +295,23 @@ const BookingCalendar = () => {
 				</div>
 
 				<Timeline
+					onItemClick={() => {
+						setShowReservationModal(true);
+					}}
+					onItemSelect={() => {
+						setShowReservationModal(true);
+					}}
+					horizontalLineClassNamesForGroup={(group) => (group.id == 1 ? [ 'red-bg' ] : [])}
 					groups={groups}
 					items={items}
+					itemRenderer={itemRenderer}
 					className={'calendar-timeline'}
 					// defaultTimeStart={moment()}
 					visibleTimeStart={showingDate}
 					visibleTimeEnd={showingDateEnd}
+					onCanvasClick={() => {
+						setShowReservationModal(true);
+					}}
 					// defaultTimeEnd={moment().add(20, 'day')}
 					canMove={false}
 					lineHeight={50}
@@ -329,17 +381,36 @@ const BookingCalendar = () => {
 				</Timeline>
 			</div>
 
-			<div className={'bottom-div d-flex align-items-center'}>
+			<div className={'bottom-div d-flex align-items-center justify-content-between'}>
 				<div
 					className={'add-room'}
 					onClick={() => {
-						setShowingDate(moment());
-						setShowingDateEnd(moment().add(20, 'day'));
+						setShowAddRoomModal(true);
 					}}
 				>
 					Add Room
 				</div>
+				<div
+					className="add-reservation-btn"
+					onClick={() => {
+						setShowReservationModal(true);
+					}}
+				>
+					Add a reservation
+				</div>
 			</div>
+			<AddRoomModal
+				visible={showAddRoomModal}
+				changeVisibility={() => {
+					setShowAddRoomModal(false);
+				}}
+			/>
+			<AddReservationModal
+				visible={showReservationModal}
+				changeVisibility={() => {
+					setShowReservationModal(false);
+				}}
+			/>
 		</div>
 	);
 };

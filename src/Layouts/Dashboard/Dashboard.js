@@ -6,8 +6,9 @@ import {
 	MenuUnfoldOutlined,
 	MenuFoldOutlined,
 	UserOutlined,
-	VideoCameraOutlined,
-	UploadOutlined
+	SettingOutlined,
+	DollarOutlined,
+	CalendarOutlined
 } from '@ant-design/icons';
 import CustomRoutes from '../../Routes';
 import { Link } from 'react-router-dom';
@@ -24,22 +25,34 @@ const Dashboard = (props) => {
 	return (
 		<Layout className={'main-layout'}>
 			<Router>
-				<Sider trigger={null} collapsible collapsed={collapsed} className={'menu-sider'}>
-					<div className="logo">{collapsed ? 'Bed' : 'Bed Booking'}</div>
+				<Sider
+					trigger={null}
+					breakpoint="sm"
+					collapsedWidth="50"
+					collapsible
+					collapsed={collapsed}
+					className={collapsed ? 'menu-sider d-none d-sm-block' : 'menu-sider d-block'}
+				>
+					<div className="logo">{collapsed ? 'B' : 'Bed Booking'}</div>
 					<Menu mode="inline" defaultSelectedKeys={[ 'bookings' ]}>
-						<Menu.Item key="bookings" icon={<UserOutlined />}>
+						<Menu.Item key="bookings" icon={<CalendarOutlined />}>
 							<Link to="/" className="link-menu">
 								Bookings
 							</Link>
 						</Menu.Item>
-						<Menu.Item key="clients" icon={<VideoCameraOutlined />}>
-							<Link to="/" className="link-menu">
+						<Menu.Item key="clients" icon={<UserOutlined />}>
+							<Link to="/clients" className="link-menu">
 								Clients
 							</Link>
 						</Menu.Item>
-						<Menu.Item key="price" icon={<UploadOutlined />}>
+						<Menu.Item key="price" icon={<DollarOutlined />}>
 							<Link to="/" className="link-menu">
 								Price list
+							</Link>
+						</Menu.Item>
+						<Menu.Item key="settings" icon={<SettingOutlined />}>
+							<Link to="/settings" className="link-menu">
+								Settings
 							</Link>
 						</Menu.Item>
 					</Menu>

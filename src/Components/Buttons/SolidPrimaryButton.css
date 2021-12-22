@@ -1,0 +1,20 @@
+.solid-btn-main .custom-btn-solid {
+	color: white;
+	background-color: rgb(0 165 65);
+	padding-left: 10px !important;
+	padding-right: 10px !important;
+	text-transform: capitalize;
+	font-size: 13px !important;
+	border-radius: 4px !important;
+	height: 40px;
+	border: none;
+}
+
+.solid-btn-main .custom-btn-solid:hover {
+	background-color: rgb(0 165 65);
+}
+
+.solid-btn-main .delete-icon {
+	margin-top: 2px;
+	margin-right: 8px;
+}

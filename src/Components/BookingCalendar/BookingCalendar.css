@@ -70,10 +70,10 @@
 }
 
 .calendar-main .today-text {
-	height: 18px;
+	height: 20px;
 	border: 1px solid rgb(200 200 200);
 	border-radius: 3px;
-	font-size: 10px !important;
+	font-size: 12px !important;
 	padding-left: 5px;
 	padding-right: 5px;
 	margin-left: 5px;
@@ -84,7 +84,7 @@
 }
 
 .calendar-main .ant-picker-input > input {
-	font-size: 10px;
+	font-size: 12px;
 }
 
 .calendar-main .bottom-div {
@@ -93,7 +93,7 @@
 	margin-top: 20px;
 	position: sticky;
 	bottom: 0%;
-	z-index: 100000;
+	z-index: 100;
 	/* width: 100%; */
 	background: #ffffff;
 	box-shadow: 0px 0px 10px 1px #cecccce7 !important;
@@ -113,4 +113,20 @@
 	font-weight: 500;
 	cursor: pointer;
 	background-color: transparent;
+}
+
+.calendar-main .add-reservation-btn {
+	background-color: rgb(0 165 65);
+	font-size: 12px;
+	color: white;
+	padding-left: 10px;
+	padding-right: 10px;
+	cursor: pointer;
+	padding-top: 2px;
+	font-weight: 600;
+	padding-bottom: 2px;
+}
+
+.calendar-main .red-bg {
+	background-color: rgba(255, 0, 0, 0.37) !important;
 }

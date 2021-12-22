@@ -1,0 +1,6 @@
+.color-selector .color-div {
+	height: 30px;
+	width: 30px;
+	border-radius: 15px;
+	cursor: pointer;
+}

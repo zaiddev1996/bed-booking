@@ -1,0 +1,138 @@
+.add-reservation-modal .ant-modal-content {
+	background-color: transparent !important;
+	box-shadow: none !important;
+	/* z-index: 10000000000000; */
+}
+
+.add-reservation-modal .ant-modal-close-x {
+	display: none;
+	margin-right: 25px;
+	margin-top: 25px;
+	font-size: 18px;
+	color: black;
+}
+
+.add-reservation-modal .ant-modal-body {
+	/* background-color: white; */
+	display: flex;
+	justify-content: center;
+	border-radius: 8px;
+	/* width: 100%; */
+}
+
+@media screen and (min-width: 921px) {
+	.add-reservation-modal .left-col-top-text {
+		font-size: 54px;
+		line-height: 65px;
+	}
+	.add-reservation-modal .left-col-mid-text {
+		font-size: 17px;
+	}
+	.add-reservation-modal .left-col-bottom-text {
+		font-size: 15px;
+	}
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 920px) {
+	.add-reservation-modal .left-col-top-text {
+		font-size: 39px;
+		line-height: 40px;
+	}
+	.add-reservation-modal .left-col-mid-text {
+		font-size: 14px;
+	}
+	.add-reservation-modal .left-col-bottom-text {
+		font-size: 12px;
+	}
+}
+
+.add-reservation-modal .add-reservation-main {
+	border-radius: 4px !important;
+	background-color: white;
+	padding: 25px;
+	width: 100%;
+	height: 80vh;
+	overflow: scroll;
+}
+
+.ant-modal-centered .ant-modal {
+	width: 100% !important;
+}
+
+.add-reservation-modal .btn-save {
+	height: 30px !important;
+	width: 70px;
+	font-weight: 500;
+}
+
+.add-reservation-modal .add-reservation-text {
+	color: rgb(105 106 109);
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.add-reservation-modal .add-reservation-content {
+	margin-top: 15px;
+}
+
+.add-reservation-modal .seperator {
+	height: 1px;
+	background-color: rgb(223 220 220);
+	margin-top: 5px;
+}
+
+.add-reservation-modal .input-heading {
+	color: rgb(105 106 109);
+	font-size: 13px;
+	font-weight: 500;
+}
+
+.add-reservation-modal .add-room-input {
+	border-radius: 4px;
+	border-color: rgb(231 231 231);
+}
+
+.add-reservation-modal .add-room-input:hover {
+	border-radius: 4px;
+	border-color: rgb(231 231 231);
+}
+
+.add-reservation-modal .color-div {
+	height: 30px;
+	width: 30px;
+	border-radius: 15px;
+}
+
+.add-reservation-modal .tab-pane {
+	/* width: 100vw !important; */
+}
+
+.add-reservation-modal .ant-tabs-nav-list {
+	width: 100% !important;
+}
+
+.add-reservation-modal .ant-tabs-tab {
+	width: 33% !important;
+	display: flex;
+	justify-content: center;
+}
+
+.add-reservation-modal .payment-type-div {
+	padding-left: 15px;
+	padding-right: 25px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	border-radius: 4px;
+	/* background-color: rgb(235 237 239); */
+}
+.add-reservation-modal .payment-color {
+	height: 25px;
+	width: 25px;
+	border-radius: 12px;
+	/* background-color: yellow; */
+}
+
+.add-reservation-modal .payment-type-text {
+	font-size: 12px;
+}
